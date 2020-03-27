@@ -1,0 +1,1071 @@
+@import vars
+@import fonts
+@import libs
+@import reboot
+@import grid
+@import iconani
+// IBG, IMG-REPOSONSIVE
+@import other 
+@import burger
+// ANIMATION
+// @import animate 
+// SLICK SLIDER
+
+@import slick
+.lock
+	overflow: hidden
+section
+	padding: 80px 0
+	@media (max-width: 575.98px) 
+		padding: 40px 0
+.dnone
+	display: none 
+	opacity: 0
+.btn
+	display: inline-flex
+	font-family: 'pfd-medium'
+	font-size: 21px
+	line-height: 25px
+	text-transform: uppercase
+	color: #000000
+	border: 3px solid #bb9c66
+	padding: 10px 35px
+	justify-content: center
+	align-items: center
+	&-circle
+		border-radius: 50%
+		padding: 0
+		width: 100px
+		height: 100px
+	&:hover
+		text-decoration: none
+		color: #000
+.demo-icon
+	font-family: "fontello"
+	font-style: normal
+	font-weight: normal
+	speak: none
+	display: inline-block
+	text-decoration: inherit
+	width: 1em
+	text-align: center
+	font-variant: normal
+	text-transform: none
+.title
+	font-family: 'ceremonious', sans-serif
+	font-size: 40px
+	color: #bb9c66
+	line-height: 45px
+	text-align: center
+	overflow: hidden
+.subtitle
+	font-family: 'pfd-regular', sans-serif
+	font-size: 35px
+	line-height: 35px
+	text-transform: uppercase
+	letter-spacing: 5.25px
+	color: #fff
+	text-align: center
+	&-b
+		color: #000
+.header
+	background-color: #1c242a
+	z-index: 99
+	width: 100%
+	transition: all 0.3s ease 0s
+	@media  (max-width: 991.98px) 
+		position: fixed 
+		overflow: auto
+	&__body
+		padding: 30px 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@media (max-width: 767.98px) 
+			padding: 5px 0
+		@media (min-width: 768px) and (max-width: 991.98px)  
+			padding: 15px 0
+	&__logo
+	&__menu
+		@media (max-width: 991.98px)
+			position: fixed
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			top: -100%
+			left: 0
+			width: 100%
+			height: 100%
+			overflow: auto
+			transition: all 0.3s ease 0s
+			background-color: rgba(0,0,0,.9)
+		&.active
+			padding-top: 60px
+			top: 0
+	&__globe
+		margin-right: 10px
+	&__regionblock
+		position: relative
+		display: flex
+		justify-content: center	
+		@media  (max-width: 991.98px)  
+			position: absolute
+			top: 20px
+			left: 20px
+	&__regionlist
+		position: absolute
+		top: 15px
+		z-index: 10
+		background-color: #1c242a
+		padding: 10px
+		& .header__link
+			margin-top: 15px
+			@media (max-width: 991.98px) 
+				font-size: 20px
+				margin-top: 0px
+				padding-bottom: 5px
+			& img
+				margin-right: 10px
+				width: 15px
+	&__profilelist
+		position: absolute
+		right: 0
+		z-index: 10
+		top: 20px
+		background-color: #1c242a
+		padding: 10px
+		& .header__link
+			margin-top: 15px
+			text-transform: none
+			@media (max-width: 991.98px) 
+				font-size: 20px
+				margin-top: 5px
+				padding-bottom: 10px
+			& img
+				width: 40px
+				margin-right: 10px
+				border-radius: 50%
+
+	&__link
+		font-family: 'pfd-regular', sans-serif
+		letter-spacing: 1.4px
+		color: #fff
+		text-transform: uppercase
+		font-size: 14px
+		display: inline-flex
+		align-items: center
+		position: relative
+		@media (max-width: 991.98px)
+			font-size: 40px
+			margin-bottom: 20px
+			border-bottom: 1px solid #c2c2c2
+		&-reg
+			margin-right: 20px
+			@media (max-width: 991.98px)
+				font-size: 16px
+				border: none 
+				margin: 0 40px 0 0 
+		&:not(:first-child)
+			margin-left: 35px
+			@media (max-width: 991.98px)
+				margin-left: 0
+	&__profile
+		display: inline-flex
+		position: relative
+		padding-right: 15px
+		min-height: 100%
+		align-items: center
+		& .arrow
+			position: absolute
+			right: 0
+			&-up
+				top: 10%
+			&-down
+				bottom: 10%
+.first-screen
+	padding: 45px 0 100px
+	position: relative
+	min-height: 50vh
+	display: flex
+	align-items: center
+	justify-content: center
+	&__body
+		// min-height: 30vh
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-direction: column
+	&__title
+		@media (max-width: 767.98px) 
+			margin-top: 50px
+		@media (min-width: 768px) and (max-width: 991.98px)  
+			margin-top: 70px
+	&__subtitle
+		margin: 20px 0
+		@media (max-width: 575.98px) 
+			font-size: 25px
+			letter-spacing: 0
+	&__text
+		font-size: 15px
+		font-family: 'sans-regular'
+		color: #fff
+		line-height: 25px
+		width: 65%
+		text-align: center
+		@media (max-width: 575.98px) 
+			width: 100%
+	&__btn
+		background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(208, 208, 208, 0.3) 50%, rgba(158, 158, 158, 0.3) 100%)
+		display: block
+		font-family: 'idealist', sans-serif
+		border: 3px solid #bb9c66
+		font-size: 15px
+		color: #fff
+		letter-spacing: 1.5px
+		line-height: 21px
+		text-transform: uppercase
+		padding: 15px 40px
+		margin-top: 45px
+	&__threeangle
+		position: absolute
+		border: 50px solid transparent
+		border-bottom: 50px solid white
+		bottom: 0
+	&__circle
+		position: absolute
+		bottom: 0
+		z-index: 2
+		transform: translateY(10px)
+		font-size: 25px
+		margin: 0
+		color: #bb9c66
+
+.lots
+	&__title
+	&__subtitle
+		margin: 20px
+	&__body
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+	&__topline
+		width: 100%
+		display: flex
+		justify-content: space-between
+		@media (max-width: 767.98px) 
+			display: none
+		& .lineblock
+			display: flex
+			align-items: center
+			&-right
+				transform: rotate(180deg)
+			& .line
+				width: 333px
+				height: 2px
+				background: #bb9c66
+				display: inline-block
+				@media (min-width: 768px) and (max-width: 991.98px)  
+					width: 200px
+			& .circle
+				display: inline-block
+				width: 10px
+				height: 10px
+				border: 1px solid #bb9c66
+				border-radius: 50%
+				margin: 0 10px
+			& .square
+				width: 15px
+				height: 15px
+				border: 1px solid #bb9c66
+				display: inline-block
+				transform: rotate(45deg)
+				&-b
+					width: 20px
+					height: 20px
+					margin-left: 15px
+	&__lotsblock
+		margin-top: 50px
+		display: flex
+		justify-content: space-between
+		width: 100%
+		flex-wrap: wrap
+		position: relative
+		@media (max-width: 575.98px) 
+			margin-top: 20px
+		@media (max-width: 767.98px) 
+			align-items: center
+			justify-content: center
+		& .slick-arrow
+			position: absolute
+			z-index: 99
+			display: none
+			font-size: 0
+	&__column
+		flex: 0 1 26%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		@media (max-width: 500.98px) 
+			flex-basis: 100%
+			margin-bottom: 40px
+			
+		@media (min-width: 500px) and (max-width: 767.98px) 
+			flex-basis: 60%
+			margin-bottom: 40px
+			max-width: 400px
+	&__image
+		width: 100%
+		min-height: 300px
+		position: relative
+		border: 4px solid #bb9c66
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		& .threeangle
+			position: absolute
+			border: 64px solid transparent
+			border-bottom: 64px solid white
+			bottom: 0
+			transform: translateY(4px)
+	&__timeblock
+		position: absolute
+		bottom: 0
+		display: flex
+		flex-direction: column
+		align-items: center
+		transform: translateY(7px)
+		& .time
+			font-family: 'sans-narrow'
+			font-size: 21px
+			margin-top: 10px
+	&__lotname
+		margin: 30px 0 10px
+		font-family: 'pfd-medium'
+		font-size: 21px
+		text-transform: uppercase
+		text-align: center
+		width: 80%
+		min-height: 60px
+		max-height: 60px
+		overflow: hidden
+		@media (max-width: 500.98px) 
+			min-height: auto
+			margin: 20px 0
+		@media (min-width: 500px) and (max-width: 767.98px) 
+			min-height: auto
+			margin: 20px 0
+		@media (min-width: 768px) and (max-width: 1199.98px)  
+			width: 100%
+			margin-bottom: 20px
+	&__betblock
+		display: flex
+		width: 100%
+		justify-content: space-around
+	&__check,
+	&__pass
+		display: flex
+		flex-direction: column
+		align-items: center
+		border-bottom: 1px solid #bb9c66
+		align-self: start
+		min-width: 50px
+		padding-bottom: 5px
+		cursor: pointer
+		& img
+			margin-bottom: 5px
+	&__currentbetblock
+		background-image: url('../img/square-bg.png')
+		background-repeat: no-repeat
+		background-position: center center
+		margin: 0 20px
+		min-height: 100px
+		min-width: 100px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center		
+	&__currentbet
+		font-family: 'sans-regular'
+		font-size: 14px
+		line-height: 25px
+	&__currentprice
+		font-size: 50px
+		font-family: 'bravorg'
+		border: none
+		background: transparent
+		opacity: 1
+		width: 100%
+		text-align: center
+		display: flex
+		justify-content: center
+		align-items: center
+		color: #000
+		// padding: 0 30px
+		@media (min-width: 768px) and (max-width: 1199.98px)  
+			font-size: 35px
+	&__currentdollar
+	&__btn
+		margin-top: 40px
+		@media (max-width: 500.98px) 
+			margin-top: 20px
+	&__alllotsbtn
+		margin: 0 30px
+.alllots
+	padding-top: 0
+	&__body
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+	&__title
+		display: flex
+		align-items: center
+		& .arrow
+			display: flex
+			justify-content: center
+			align-items: center
+			position: relative
+			&-left
+				transform: rotate(180deg)
+			& .circle
+				display: inline-block
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				border: 1px solid #bb9c66
+				margin-right: 5px
+			& .line
+				display: inline-block
+				width: 100px
+				height: 1px
+				background: #bb9c66
+				@media (max-width: 575.98px) 
+					width: 50px
+			& .short
+				position: absolute
+				display: inline-block
+				height: 1px
+				width: 25px
+				background: #bb9c66
+				&.lefttop
+					top: -4px
+					transform: rotate(45deg)
+					right: -3px
+				&.righttop
+					top: -4px
+					transform: rotate(45deg)
+					right: 5px
+				&.bottomleft
+					bottom: -4px
+					transform: rotate(-45deg)
+					right: 5px
+				&.bottomright
+					bottom: -4px
+					transform: rotate(-45deg)
+					right: -3px
+	&__menu
+		@media  (min-width: 767.98px) 
+			display: none
+	&__lotsblock
+		margin-top: 100px
+		width: 85%
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+		@media (max-width: 575.98px) 
+			width: 100%
+			margin-top: 40px
+	&__border
+		position: absolute
+		display: flex
+		flex-direction: column
+		align-items: center
+		@media (max-width: 767.98px) 
+			display: none
+		&-right
+			transform: translateX(40px)
+			right: 0
+			@media (min-width: 768px) and (max-width: 991.98px)  
+				transform: translateX(22px)
+			@media (min-width: 992px) and (max-width: 1199.98px)   
+				transform: translateX(35px)
+		&-left
+			transform: translateX(-40px)
+			left: 0
+			@media (min-width: 768px) and (max-width: 991.98px)  
+				transform: translateX(-22px)
+		& .square
+			transform: rotate(45deg)
+			display: inline-block
+			width: 15px
+			height: 15px
+			border: 1px solid #bb9c66
+		& .line
+			height: 100px
+			width: 1px
+			background: #bb9c66
+			margin: 19px 0
+			@media (min-width: 768px) and (max-width: 991.98px)  
+				height: 64px
+			@media (min-width: 992px) and (max-width: 1199.98px)   
+				height: 85px
+
+		& .dot
+			width: 10px
+			height: 10px
+			background: #bb9c66
+			border-radius: 50%
+
+	&__column
+		position: relative
+		border-radius: 50%
+		flex: 0 1 26%
+		min-height: 252px
+		z-index: 1
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 50px
+		cursor: pointer
+		@media (max-width: 575.98px)
+			flex-basis: 100%
+			max-width: 250px
+			min-height: 250px
+		@media (min-width: 576px) and (max-width: 767.98px) 
+			flex-basis: 50%
+			max-width: 250px
+			min-height: 250px
+		@media (min-width: 768px) and (max-width: 991.98px)  
+			flex-basis: 30%
+			max-width: 180px
+			min-height: 180px
+		@media (min-width: 992px) and (max-width: 1199.98px)   
+			flex-basis: 25%
+			min-width: 220px
+			min-height: 220px
+		&:hover .column__icon
+			transform: translateY(-10px)
+		&::after
+			border-radius: 50%
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			z-index: 5
+			background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8) )
+		& .column
+			&__content
+				z-index: 8
+				color: #fff
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+			&__icon
+				transition: .5s
+				border-radius: 50%
+				width: 75px
+				height: 75px
+				@media (min-width: 768px) and (max-width: 991.98px)  
+					width: 50px
+					height: 50px
+			&__title
+				font-family: 'pfd-medium'
+				font-size: 21px
+				text-transform: uppercase
+				line-height: 25px
+				margin: 25px 0
+				// width: 80%
+				padding: 0 40px
+				text-align: center
+				min-height: 45px
+				@media (min-width: 768px) and (max-width: 991.98px)  
+					margin: 10px 0
+					font-size: 16px
+					line-height: 1.5
+				@media (min-width: 992px) and (max-width: 1199.98px)   
+					margin: 15px 0
+			&__lines
+				display: flex
+				align-items: center
+				& .line
+					width: 25px
+					height: 1px
+					background: #bb9c66
+					&-left
+					&-right
+				& .square
+					transform: rotate(45deg)
+					display: inline-block
+					width: 15px
+					height: 15px
+					border: 1px solid #bb9c66
+					margin: 0 15px
+	&__dot
+		position: absolute
+		bottom: 0
+		border-radius: 50%
+		width: 10px
+		height: 10px
+		background: #bb9c66
+		transform: translateY(31px)
+		@media (max-width: 575.98px) 
+			display: none
+
+.about
+	padding-top: 0
+	&__content
+		display: flex
+		justify-content: space-between
+	&__decoration
+		flex-basis: 7.5%
+		background: url('../img/pattern.png') repeat-y 0 0 
+		@media (max-width: 575.98px) 
+			display: none
+		@media (min-width: 576px) and (max-width: 767.98px) 
+			flex-basis: 16%
+		@media (min-width: 768px) and (max-width: 991.98px)  
+			flex-basis: 18%
+		@media (min-width: 992px) and (max-width: 1199.98px)   
+			flex-basis: 13%
+	&__column
+		flex-basis: 90%
+		@media (max-width: 575.98px) 
+			flex-basis: 100%
+		& p
+			font-family: 'sans-regular'
+			font-size: 15px
+			line-height: 25px
+			margin-bottom: 30px
+			&:last-child
+				margin: 0
+.services
+	background-color: #1c242a
+	&__serviceblock
+		display: flex
+		justify-content: space-between
+		margin-top: 60px
+		@media (max-width: 767.98px) 
+			flex-wrap: wrap
+			flex-direction: column
+			justify-content: center
+			align-items: center
+	&__column
+		flex-basis: 30%
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		@media (max-width: 767.98px) 
+			margin-bottom: 60px
+			&:not(:last-child)
+				border-bottom: 1px solid #c2c2c2
+				padding-bottom: 20px
+		@media (min-width: 768px) and (max-width: 991.98px)  
+			flex-basis: 25%
+
+		& .column
+			&__icon
+				width: 160px
+				height: 160px
+				margin-bottom: 40px
+				@media (max-width: 767.98px) 
+					width: 100px
+					height: 100px
+				@media (min-width: 768px) and (max-width: 991.98px)  
+					width: 110px
+					height: 110px
+			&__title
+				font-size: 21px
+				font-family: 'pfd-medium'
+				color: #fff
+				text-transform: uppercase
+				letter-spacing: 2.1px
+				@media (min-width: 768px) and (max-width: 991.98px)
+					font-size: 16px
+			&__subtitle
+				font-family: 'sans-regular'
+				color: #bb9c66
+				text-align: center
+				margin: 30px 0
+				width: 70%
+				line-height: 25px
+				@media (max-width: 575.98px)
+					width: 100%
+				@media (min-width: 768px) and (max-width: 991.98px)  
+					width: 100%
+				@media (min-width: 992px) and (max-width: 1199.98px)   
+					width: 90%
+			&__btn
+				position: relative
+				display: flex
+				align-items: center
+				& a
+					font-family: 'pfd-medium'
+					font-size: 21px
+					text-transform: uppercase
+					letter-spacing: 2.1px
+					color: #fff
+					margin: 0 20px
+				& .line
+					width: 50px
+					height: 1px
+					display: inline-block
+					background: #bb9c66
+					@media (min-width: 768px) and (max-width: 991.98px)  
+						width: 40px
+
+.quote
+	&__content
+	&__quoteblock
+		display: flex
+		align-items: center
+		justify-content: center
+		@media (max-width: 575.98px) 
+			flex-direction: column
+	&__photoblock
+		flex-basis: 18%
+		min-height: 276px
+		margin-right: 70px
+		@media (max-width: 575.98px) 
+			flex-basis: 100%
+			margin-right: 0
+	&__authorblock
+		flex-basis: 48%
+		font-family: 'sans-regular'
+		font-size: 15px
+		& q
+			font-family: 'sans-italic'
+			font-size: 25px
+	&__whosay
+		margin: 35px 0 10px
+		@media (max-width: 575.98px) 
+			margin-top: 20px
+	&__year
+	&__refresh
+		display: flex
+		align-items: center
+		justify-content: center
+		& img
+			margin: 0 50px
+			@media (max-width: 575.98px) 
+				margin: 0 20px
+	&__lineblock
+		display: flex
+		align-items: center
+		& .line
+			display: inline-block
+			width: 110px
+			height: 1px
+			background: #bb9c66
+			@media (max-width: 575.98px) 
+				width: 90px
+		& .circle
+			width: 10px
+			height: 10px
+			border: 1px solid #bb9c66
+			display: inline-block
+			border-radius: 50%
+			margin: 0 5px
+		&.lineblock-right
+			transform: rotate(180deg)
+.blog
+	padding-top: 0
+	&__body
+	&__row
+		display: flex
+		justify-content: space-between
+		@media (max-width: 575.98px) 
+			flex-direction: column
+	&__column
+		flex-basis: 45%
+		position: relative
+		margin-bottom: 50px
+		& .column
+			&__title
+				display: flex
+				align-items: center
+				margin-bottom: 25px
+				& img
+					margin-right: 15px
+				& h2
+					font-family: 'pfd-medium'
+					font-size: 35px
+					text-transform: uppercase
+					letter-spacing: 3.5px
+			&__article
+				font-family: 'sans-regular'
+				font-size: 15px
+				&:not(:last-child)
+					margin-bottom: 35px
+			&__date
+				font-size: 12px
+				color: #bb9c66
+				margin-bottom: 10px
+			&__subtitle
+				font-family: 'sans-bold'
+				text-decoration: underline
+				margin-bottom: 10px
+				@media (max-width: 575.98px) 
+					line-height: 1.5
+			&__text
+				// letter-spacing: 1px
+				line-height: 25px
+			&__email
+				height: 50px
+				border: 3px solid #bb9c66
+				position: absolute
+				bottom: 0
+				right: 0
+				left: 0
+				display: flex
+				justify-content: space-between
+				@media (max-width: 575.98px) 
+					transform: translateY(20px)
+			&__input
+				flex-basis: 80%
+				padding: 0 20px
+				@media (max-width: 575.98px) 
+					flex-basis: 65%
+				@media (min-width: 576px) and (max-width: 767.98px) 
+					padding: 0 15px
+			&__btn
+				flex-basis: 20%
+				background: transparent
+				text-transform: uppercase
+				font-family: 'pfd-medium'
+				letter-spacing: 2px
+				font-size: 21px
+				display: flex
+				align-items: center
+				justify-content: center
+				@media (max-width: 575.98px) 
+					flex-basis: 24%
+				& .border
+					width: 1px
+					height: 32px
+					background: #bb9c66
+					display: inline-block
+					margin-right: 20px
+					@media (max-width: 575.98px) 
+						margin-right: 10px
+				& .arrow
+					margin-left: 10px
+					margin-right: 10px
+					display: flex
+					align-items: center
+					position: relative
+					height: 32px
+					& .line
+						width: 24px
+						height: 1px
+						display: inline-block
+						background: #bb9c66
+					& .short
+						width: 13px
+						height: 1px
+						display: inline-block
+						background: #bb9c66
+						position: absolute
+						&.lefttop
+							top: 11px
+							right: 3px
+							transform: rotate(45deg)
+						&.righttop
+							top: 11px
+							right: -2px
+							transform: rotate(45deg)
+						&.rightbottom
+							bottom: 11px
+							right: -2px
+							transform: rotate(-45deg)
+						&.leftbottom
+							bottom: 11px
+							right: 3px
+							transform: rotate(-45deg)
+.footer
+	background-color: #1c242a
+	padding: 60px 0 
+	@media (max-width: 767.98px) 
+		padding: 30px 0
+	&__body
+		display: flex
+		justify-content: space-between
+		@media (max-width: 767.98px) 
+			flex-direction: column
+	&__logoblock
+		flex-basis: 16%
+		@media (max-width: 767.98px) 
+			order: 3
+			flex-basis: 100%
+			display: flex
+			flex-direction: column
+			align-items: center
+		@media (min-width: 768px) and (max-width: 991.98px)  
+			flex-basis: 20%
+		& img
+			width: 90%
+			margin-bottom: 20px
+			@media (max-width: 767.98px) 
+				width: 35%
+				margin-bottom: 10px
+	&__rights
+		font-family: 'sans-regular'
+		color: #bb9c66
+		@media (min-width: 768px) and (max-width: 1199.98px)  
+			font-size: 10px
+	&__nav
+		display: flex
+		flex-wrap: wrap
+		flex-basis: 45%
+		@media (max-width: 767.98px) 
+			order: 2
+			flex-basis: 100%
+			margin: 20px 0
+		@media (min-width: 768px) and (max-width: 991.98px)  
+			flex-basis: 60%
+		@media (min-width: 992px) and (max-width: 1199.98px)   
+			flex-basis: 60%
+		& a
+			// border: 1px solid red
+			@media (max-width: 767.98px) 
+				flex-basis: 45%
+				text-align: center
+				margin-bottom: 20px
+	&__link
+		margin-right: 15px
+		font-family: 'pfd-medium'
+		color: #fff
+		text-transform: uppercase
+		letter-spacing: 1.5px
+		line-height: 25px
+		font-size: 14px
+	&__numberblock
+		flex-basis: 19%
+		display: flex
+		flex-direction: column
+		align-items: end
+		@media (max-width: 767.98px) 
+			flex-basis: 100%
+			align-items: center
+		@media (min-width: 992px) and (max-width: 1199.98px)   
+			flex-basis: 22%
+	&__number
+		font-family: 'bravorg'
+		font-size: 50px
+		display: flex
+		color: #bb9c66
+		margin-bottom: 10px
+		@media (min-width: 768px) and (max-width: 991.98px)  
+			font-size: 30px
+		& .top
+			font-size: 25px
+			transform: translateY(0px)
+	&__feedback
+		// display: inline-flex
+		color: #bb9c66
+		border-bottom: 1px dashed #bb9c66
+.modal
+	&-wrap
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: rgba(0,0,0,0.5)
+		z-index: 50
+		overflow: auto
+		transition: .5s
+	color: #fff
+	width: 400px
+	// height: 40vh
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translateX(-50%) translateY(-50%)
+	background: #000
+	background-color: #1c242a
+	border-radius: 15%
+	z-index: 100
+	align-items: center
+	@media (max-width: 575.98px) 
+		width: 300px
+	
+	&__header
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		border-bottom: 1px solid #c2c2c2
+		margin-top: 20px
+		padding-bottom: 20px
+		@media (max-width: 991.98px)  
+			padding-bottom: 10px
+	&__title
+		text-align: center
+		font-size: 30px
+		font-family: 'pfd-medium'
+		@media (max-width: 575.98px) 
+			font-size: 20px
+	&__close
+		font-size: 45px
+		position: absolute
+		right: 20px
+		transform: rotate(45deg)
+		cursor: pointer
+		line-height: 24px
+	&__body
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		// height: 200px
+		padding: 30px 0
+		border-bottom: 1px solid #c2c2c2
+		@media (max-width: 991.98px)  
+			padding: 10px 0
+		& input
+			height: 45px
+			border-radius: 5px
+			width: 70%
+			padding-left: 10px
+			font-family: 'sans-regular'
+			@media (max-width: 575.98px) 
+				height: 30px
+				width: 90%
+			&.input-mail
+			&.input-name
+				margin: 30px 0
+				@media (max-width: 767.98px) 
+					margin: 10px 0
+				@media (min-width: 768px) and (max-width: 991.98px)  
+					margin: 10px 0
+		& button
+			width: 70%
+			height: 45px
+			text-transform: uppercase
+			border-radius: 5px
+			font-size: 25px
+			font-family: 'pfd-medium'
+			@media (max-width: 575.98px) 
+				height: 30px
+				width: 90%
+	&__footer
+		margin: 20px 0
+		padding: 0 20px
+		font-family: 'sans-regular'
+		display: flex
+		justify-content: center
+		align-items: center
+		& input
+			margin-right: 10px
+
+
+
+		

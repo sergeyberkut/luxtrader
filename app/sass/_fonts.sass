@@ -1,0 +1,32 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+@mixin font($f-name, $f-style, $f-weight, $f-url)
+	@font-face
+		font-family: $f-name
+		font-style: $f-style
+		font-weight: $f-weight
+		src: url($f-url) format('woff2')
+
+
+@include font('aslrubl', normal, 400, '../fonts/aslrubl.woff2')
+@include font('bravorg', normal, 400, '../fonts/bravorg.woff2')
+@include font('ceremonious', normal, 400, '../fonts/ceremonious.woff2')
+@include font('harbell', normal, 400, '../fonts/harbell.woff2')
+@include font('idealist', normal, 400, '../fonts/idealist.woff2')
+@include font('pfd-medium', normal, 400, '../fonts/pfd-medium.woff2')
+@include font('pfd-regular', normal, 400, '../fonts/pfd-regular.woff2')
+@include font('sans-bold', normal, 400, '../fonts/sans-bold.woff2')
+@include font('sans-italic', normal, 400, '../fonts/sans-italic.woff2')
+@include font('sans-narrow', normal, 400, '../fonts/sans-narrow.woff2')
+@include font('sans-regular', normal, 400, '../fonts/sans-regular.woff2')
+@include font('fontello', normal, 400, '../fonts/fontello.woff2')
