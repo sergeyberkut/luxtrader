@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 	let body = document.querySelector('body');
 	// if (body.clientWidht < 500) {
 	// 	$('.lots__lotsblock').slick({
@@ -12,63 +12,71 @@ document.addEventListener("DOMContentLoaded", function() {
 		let icon = document.querySelector('.animate-spin');
 		// debugger
 		icon.classList.add('dnone')
-	}, 5000 )
-	function ibg(){
-		let ibg=document.querySelectorAll(".ibg"); for (var i = 0; i < ibg.length; i++) { if(ibg[i].querySelector('img')){ ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('img').getAttribute('src')+')'; } }	
+	}, 5000)
+
+	function ibg() {
+		let ibg = document.querySelectorAll(".ibg");
+		for (var i = 0; i < ibg.length; i++) {
+			if (ibg[i].querySelector('img')) {
+				ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+			}
 		}
-		ibg();
-		$('.header__burger').click(function(event) {
-			$('.header__burger,.header__menu').toggleClass('active');
-			$('body').toggleClass('lock');
-		});
-		function close() {
-			let width = $('body').outerWidth(true);
-			if (width <= 992) { 
-				let btns = document.querySelectorAll('.header__menu a');
-				for (let one of btns) {
-					one.addEventListener('click', function () {
-						$('.header__burger,.header__menu').toggleClass('active');
-							$('body').toggleClass('lock');
-					});
-				}
+	}
+	ibg();
+	$('.header__burger').click(function (event) {
+		$('.header__burger,.header__menu').toggleClass('active');
+		$('body').toggleClass('lock');
+	});
+
+	function close() {
+		let width = $('body').outerWidth(true);
+		if (width <= 992) {
+			let btns = document.querySelectorAll('.header__menu a');
+			for (let one of btns) {
+				one.addEventListener('click', function () {
+					$('.header__burger,.header__menu').toggleClass('active');
+					$('body').toggleClass('lock');
+				});
 			}
-			}
-		close();
+		}
+	}
+	close();
 	let width = $('body').outerWidth(true);
 	if (width <= 992) {
-		$( ".header__regionblock" ).appendTo( ".header__menu" );
+		$(".header__regionblock").appendTo(".header__menu");
 	};
 	if (width >= 992) {
 		$('.header__regionblock').appendTo('.header__body')
 	}
-		window.addEventListener('resize', function () {
-				let width = $('body').outerWidth(true);
-				if (width <= 992) {
-					$( ".header__regionblock" ).appendTo( ".header__menu" );
-				};
-				if (width >= 992) {
-					$('.header__regionblock').appendTo('.header__body')
-				}
-		});
-
-
-		
+	window.addEventListener('resize', function () {
+		let width = $('body').outerWidth(true);
+		if (width <= 992) {
+			$(".header__regionblock").appendTo(".header__menu");
+		};
+		if (width >= 992) {
+			$('.header__regionblock').appendTo('.header__body')
+		}
+	});
 
 
 
-	$('.header__link-reg').on('click', function(e) {
+
+
+	$('.header__link-reg').on('click', function (e) {
 		$('.header__profilelist').addClass('dnone');
 		$('.header__regionlist').toggleClass('dnone');
 	})
 
-	$('.header__profile-link').on('click', function(e) {
+	$('.header__profile-link').on('click', function (e) {
 		$('.header__regionlist').addClass('dnone');
 		$('.header__profilelist').toggleClass('dnone');
 	});
 
-	$("body").on('click', '[href*="#"]', function(e){
+	$("body").on('click', '[href*="#"]', function (e) {
 		var fixed_offset = 0;
-		$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+		$('html,body').stop().animate({
+			scrollTop: $(this.hash).offset().top - fixed_offset
+		}, 1000);
 		e.preventDefault();
 	});
 
@@ -80,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			price.innerHTML = numberWithSpaces(+(price.innerHTML.replace(/\s/g, '')) + 5000)
 		});
 	}
+
 	function numberWithSpaces(x) {
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 	}
@@ -112,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	let check = document.querySelectorAll('.lots__check');
 	let pass = document.querySelectorAll('.lots__pass');
+
 	function addOne(arr) {
 		for (let one of arr) {
 			one.addEventListener('click', function () {
@@ -137,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			if (e.target.classList == 'modal-wrap') {
 				modal.classList.add('dnone');
 				body.classList.remove('lock')
-			}	
+			}
 		});
 	});
 	window.addEventListener('resize', function (e) {
